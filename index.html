@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="Gordon Mei" />
+<title>Social Graft - Facebook Share/Connect Button - Purely CSS</title>
+
+<style type="text/css">
+/* A localizable Facebook share/connect button */
+/* We are a-ok in Firefox/Camino, Chrome/Safari, Opera, IE10/9/8/7/6 */
+.facebookshare:before {
+    content: "f";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 43px;
+    color: #fff;
+    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 40px;
+    line-height: 42px\0/;
+    text-indent: 0;
+    text-shadow: none;
+    text-align: center;
+    -webkit-box-shadow: 0 -1px 0 #4a65a0 inset;
+    -moz-box-shadow: 0 -1px 0 #4a65a0 inset;
+    box-shadow: -1px 0 0 #4a65a0 inset;
+    border-width: 0 1px 0 0;
+    border-right-width: 2px\0/;
+    border-style: solid;
+    border-style: groove\0/;
+    border-color: #9babcc;
+}
+
+.facebookshare {
+    position: relative;
+    display: inline-block;
+    *zoom: 1;
+    padding: 0 10px;
+    min-width: 276px;
+    height: 40px;
+    color: #fff;
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-smoothing: subpixel-antialiased;
+    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif; /* Klavika smaller body height at the same font sizes */
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 40px;
+    text-decoration: none;
+    text-indent: 43px;
+    text-shadow: 1px 1px 0 #37496d;
+    text-align: center;
+    background-color: #748bb7;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #748bb7), color-stop(1, #5771a6));
+    background-image: -webkit-linear-gradient(top, #748bb7 0%, #5771a6 100%);
+    background-image: -moz-linear-gradient(top, #748bb7 0%, #5771a6 100%);
+    background-image: -o-linear-gradient(top, #748bb7 0%, #5771a6 100%);
+    background-image: -ms-linear-gradient(top, #748bb7 0%, #5771a6 100%);
+    background-image: linear-gradient(top, #748bb7 0%, #5771a6 100%);
+    /* filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#748bb7', EndColorStr='#5771a6'); */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#748bb7', EndColorStr='#5771a6')";
+    *background-image: url(bkgd_facebookshare_sprite_ie.png); /* filter sits higher on the z-index than background-image */
+    *background-repeat: no-repeat;
+    *background-position: 0 0;
+    -webkit-box-shadow: 0 1px 0 #97a6c8 inset, 0 -1px 0 #97a6c8 inset, 1px 0 0 #97a6c8 inset, -1px 0 0 #97a6c8 inset;
+    -moz-box-shadow: 0 1px 0 #97a6c8 inset, 0 -1px 0 #97a6c8 inset, 1px 0 0 #97a6c8 inset, -1px 0 0 #97a6c8 inset;
+    box-shadow: 0 1px 0 #97a6c8 inset, 0 -1px 0 #97a6c8 inset, 1px 0 0 #97a6c8 inset, -1px 0 0 #97a6c8 inset;
+    border: 1px solid #3a5795;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    cursor: pointer; /* ie7 needs this with the filters */
+}
+
+.facebookshare:hover {
+    background-color: #64789e;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #829ac8), color-stop(1, #67799e));
+    background-image: -webkit-linear-gradient(top, #829ac8 0%, #67799e 100%);
+    background-image: -moz-linear-gradient(top, #829ac8 0%, #67799e 100%);
+    background-image: -o-linear-gradient(top, #829ac8 0%, #67799e 100%);
+    background-image: -ms-linear-gradient(top, #829ac8 0%, #67799e 100%);
+    background-image: linear-gradient(top, #829ac8 0%, #67799e 100%);
+    /* filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#829ac8', EndColorStr='#67799e'); */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#829ac8', EndColorStr='#67799e')";
+    *background-position: 0 -40px;
+}
+
+.facebookshare:active {
+    box-shadow: -5px 5px 7px #5771a6 inset, 5px -5px 7px #5771a6 inset;
+    -moz-box-shadow: -5px 5px 7px #5771a6 inset, 5px -5px 7px #5771a6 inset;
+    -webkit-box-shadow: -5px 5px 7px #5771a6 inset, 5px -5px 7px #5771a6 inset;
+    *background-position: 0 -80px;
+}
+
+/* child span is optional if you want cleaner markup. only use if you want enhancement of faux text-shadows in IE8/7/6 */
+.facebookshare > span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=1, OffY=1, Color='#37496d', Positive='true');
+    -ms-filter: "progid:DXImageTransform.Microsoft.dropshadow(OffX=1, OffY=1, Color='#37496d', Positive='true')";
+}
+</style>
+
+</head>
+<body>
+
+<a href="#" class="facebookshare">
+    <span><!--span is optional, for faux text shadows in IE8/7/6 -->
+        Share on Facebook
+    </span>
+</a>
+
+<br />
+<br />
+
+<a href="#" class="facebookshare">
+    Parteger sur Facebook
+</a>
+
+<br />
+<br />
+
+<a href="#" class="facebookshare">
+    Compatir en Facebook
+</a>
+
+</body>
+</html>
+
+<!--Created: 2011 December 2-->
